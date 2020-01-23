@@ -1,0 +1,26 @@
+{
+  "name" : "platformio",
+  "version" : "4.1.0",
+  "description" : "Plugin firmware for compiling with Platformio.",
+  "author" : "Alvaro Luis Bustamante",
+  "license" : "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/thinger-io/platformio-plugin.git"
+  },
+  "metadata" : {
+    "name" : "Platformio",
+    "description" : "Plugin firmware for compiling with Platformio in Thinger.io",
+    "image" : "https://cdn.freebiesupply.com/logos/large/2x/platformio-logo-svg-vector.svg",
+    "icon" : "https://cdn.freebiesupply.com/logos/large/2x/platformio-logo-svg-vector.svg"
+  },
+  "tokens" : {
+  },
+  "task" : {
+    "type" : "docker",
+    "image" : "thinger/platformio-plugin:4.1.0"
+  },
+  "interface" : {
+    
+  }
+}
