@@ -9,18 +9,22 @@
     "url" : "https://github.com/thinger-io/platformio-plugin.git"
   },
   "metadata" : {
-    "name" : "Platformio",
-    "description" : "Plugin firmware for compiling with Platformio in Thinger.io",
+    "name" : "PlatformIO",
+    "description" : "Toolchain for online compiling",
+    "category" : "toolchain",
     "image" : "https://cdn.freebiesupply.com/logos/large/2x/platformio-logo-svg-vector.svg",
     "icon" : "https://cdn.freebiesupply.com/logos/large/2x/platformio-logo-svg-vector.svg"
   },
-  "tokens" : {
-  },
   "task" : {
     "type" : "docker",
-    "image" : "thinger/platformio-plugin"
-  },
-  "interface" : {
-    
+    "image" : "thinger/platformio-plugin",
+    "volumes" : {
+      "platformio" : "/.platformio",
+      "{{BUILD_PATH}}" : "/workspace"
+    },
+    "toolchain" : {
+      "init" : "platformio init",
+      "build" : "platformio run"
+    }
   }
 }
