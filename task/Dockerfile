@@ -13,9 +13,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install -U platformio==${APP_VERSION}
 
-RUN groupadd --gid 1000 thinger \
-  && useradd --uid 1000 --gid thinger --shell /bin/bash --create-home thinger
+RUN groupadd --gid 1000 platformio \
+  && useradd --uid 1000 --gid platformio --shell /bin/bash --create-home platformio
 
-USER thinger
+USER platformio
 
-WORKDIR /home/thinger/workspace
+WORKDIR /home/platformio/workspace

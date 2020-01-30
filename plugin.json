@@ -19,8 +19,8 @@
     "type" : "docker",
     "image" : "thinger/platformio-plugin",
     "volumes" : {
-      "platformio" : "/home/thinger/.platformio",
-      "{{BUILD_PATH}}" : "/home/thinger/workspace"
+      "platformio" : "/home/platformio/.platformio",
+      "{{BUILD_PATH}}" : "/home/platformio/workspace"
     },
     "toolchain" : {
       "init" : "platformio init",
