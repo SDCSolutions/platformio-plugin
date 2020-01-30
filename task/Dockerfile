@@ -7,7 +7,7 @@ LABEL app.name="${APP}" \
       app.version="${APP_VERSION}" \
       maintainer="Alvaro Luis Bustamante <alvarolb@thinger.io>"
 
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     && rm -rf /var/lib/apt/lists/*
 
