@@ -11,14 +11,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U platformio==${APP_VERSION} && \
-    mkdir -p /workspace && \
-    mkdir -p /.platformio && \
-    chmod a+rwx /.platformio
+RUN pip install -U platformio==${APP_VERSION}
 
 RUN groupadd --gid 1000 thinger \
   && useradd --uid 1000 --gid thinger --shell /bin/bash --create-home thinger
 
 USER thinger
 
-WORKDIR /workspace
+WORKDIR /home/thinger/workspace
