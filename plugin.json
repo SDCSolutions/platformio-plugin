@@ -24,7 +24,8 @@
     },
     "toolchain" : {
       "init" : "platformio init",
-      "build" : "platformio run"
+      "build" : "platformio run",
+      "shell" : "/bin/bash"
     }
   }
 }
