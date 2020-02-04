@@ -25,7 +25,8 @@
     "toolchain" : {
       "init" : "platformio init",
       "build" : "platformio run",
-      "shell" : "/bin/bash"
+      "clean" : "platformio run -t clean",
+      "shell" : "/bin/bash -l"
     }
   }
 }
