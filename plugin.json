@@ -20,13 +20,16 @@
     "image" : "thinger/platformio-plugin",
     "volumes" : {
       "platformio" : "/home/platformio/.platformio",
-      "{{BUILD_PATH}}" : "/home/platformio/workspace"
-    },
-    "toolchain" : {
+      "workspace" : "/home/platformio/workspace"
+    }
+  },
+  "toolchain" : {
+    "commands" : {
       "init" : "platformio init",
       "build" : "platformio run",
       "clean" : "platformio run -t clean",
       "shell" : "/bin/bash -l"
-    }
+    },
+    "artifact" : ".pio/build/(?<env>[a-z0-9_]+)/firmware.bin"
   }
 }

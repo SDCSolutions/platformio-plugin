@@ -19,3 +19,5 @@ RUN groupadd --gid 1000 platformio \
 USER platformio
 
 WORKDIR /home/platformio/workspace
+
+ENTRYPOINT ["/bin/bash"]
