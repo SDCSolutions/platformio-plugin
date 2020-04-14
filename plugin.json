@@ -1,6 +1,6 @@
 {
   "name" : "platformio",
-  "version" : "4.1.0",
+  "version" : "4.3.1",
   "description" : "Plugin firmware for compiling with Platformio.",
   "author" : "Alvaro Luis Bustamante",
   "license" : "MIT",

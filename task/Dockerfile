@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-ENV APP_VERSION="4.1.0" \
+ENV APP_VERSION="4.3.1" \
     APP="platformio-core"
 
 LABEL app.name="${APP}" \
@@ -20,4 +20,4 @@ USER platformio
 
 WORKDIR /home/platformio/workspace
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["platformio"]
